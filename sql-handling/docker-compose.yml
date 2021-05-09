@@ -1,0 +1,19 @@
+version: "3"
+services:
+  db:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassw
+      - MYSQL_DATABASE=myDB
+      - MYSQL_USER=user 
+      - MYSQL_PASSWORD=passw
+      # - processes=200
+      # - DATABASES=sample
+    restart: always
+    volumes:
+      - - ./db:/var/lib/mysql
+  library:
+    image: requirement_handling_library
+    build: ./library
+    ports:
+        - "8270:8270"

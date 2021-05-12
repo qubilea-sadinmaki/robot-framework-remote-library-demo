@@ -1,0 +1,9 @@
+version: "3"
+services:
+  library:
+    image: excel_handling_library
+    build: ./library
+    volumes:
+      - ./exceldocs:/opt/rfserver/exceldocs
+    ports:
+        - "8270:8270"

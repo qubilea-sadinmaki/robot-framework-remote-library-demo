@@ -11,9 +11,9 @@ services:
       # - DATABASES=sample
     restart: always
     volumes:
-      - - ./db:/var/lib/mysql
+      - ./db:/var/lib/mysql
   library:
-    image: requirement_handling_library
+    image: sql_handling_library
     build: ./library
     ports:
         - "8270:8270"

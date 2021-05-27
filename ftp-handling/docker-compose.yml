@@ -1,0 +1,22 @@
+version: "3"
+services:
+  library:
+    image: remote_ftp_library
+    container_name: remote-ftp-library
+    build: ./library
+    ports:
+        - "8270:8270"
+
+  ftpgrab:
+    restart: always
+    image: fauria/vsftpd:latest
+    container_name: ftp-server
+    ports: 
+      - "21:21"
+    volumes:
+      - ./home:/home/vsftpd
+      - ./log:/var/log/vsftpd
+    environment:
+      - FTP_USER=robot
+      - FTP_PASS=robot
+      - PASV_ADDRESS=127.0.0.1

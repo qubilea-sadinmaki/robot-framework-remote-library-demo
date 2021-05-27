@@ -2,12 +2,8 @@
 .DS_Store
 excel-handling/exceldocs/
 sql-handling/db/
-excel-handling/log.html
-excel-handling/output.xml
-excel-handling/report.html
-sql-handling/log.html
-sql-handling/output.xml
-sql-handling/report.html
-excel-handling/log.html
-excel-handling/output.xml
-excel-handling/report.html
+*/log.html
+*/output.xml
+*/report.html
+ftp-handling/venv/
+ftp-handling/home/

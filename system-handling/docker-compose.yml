@@ -1,0 +1,8 @@
+version: "3"
+services:
+  library:
+    image: system_library
+    container_name: remote-system-library
+    build: ./library
+    ports:
+        - "8270:8270"
